@@ -1,8 +1,14 @@
 const axios = require('axios').default;
-const parser = require('./lib/parser.js');
+const Parser = require('./lib/parser.js');
 
-axios.get('http://thejoeshow.net').then(response => {
-  let result = parser(response.data);
-  console.log(result);
+const BASE = 'http://thejoeshow.net';
+
+axios.get(BASE).then(response => {
+  let html = response.data;
+  let parser = new Parser(BASE, html);
+
+  parser.parse();
+  
+  console.log(parser.links);
 });
 
