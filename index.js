@@ -10,5 +10,6 @@ axios.get(BASE).then(response => {
   parser.parse();
   
   console.log(parser.links);
+  console.log(parser.text);
 });
 
