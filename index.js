@@ -11,5 +11,6 @@ axios.get(BASE).then(response => {
   
   console.log(parser.links);
   console.log(parser.text);
+  console.log(parser.counts);
 });
 
