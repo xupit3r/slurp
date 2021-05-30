@@ -9,8 +9,6 @@ axios.get(BASE).then(response => {
 
   parser.parse();
   
-  console.log(parser.links);
-  console.log(parser.text);
-  console.log(parser.counts);
+  console.log(parser.trigrams);
 });
 
